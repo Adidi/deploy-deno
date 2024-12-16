@@ -1,8 +1,10 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import "@radix-ui/themes/styles.css";
+import { Theme } from "@radix-ui/themes";
 
 export const metadata: Metadata = {
-  title: 'Next.js on Deno',
-  description: 'Deploy your Next.js application to Deno Deploy.',
+  title: "Next.js on Deno",
+  description: "Deploy your Next.js application to Deno Deploy.",
 };
 
 export default function RootLayout({
@@ -12,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Theme>{children}</Theme>
+      </body>
     </html>
   );
 }
